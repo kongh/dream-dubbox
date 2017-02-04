@@ -55,5 +55,10 @@
             <artifactId>dream-exception-define</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.coder.dream</groupId>
+            <artifactId>dream-rpc-filter</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

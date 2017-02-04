@@ -12,6 +12,7 @@
         <module>dream-config-guice</module>
         <module>dream-container-guice</module>
         <module>dream-dubbo-demo</module>
+        <module>dream-rpc-filter</module>
     </modules>
 
     <properties>
@@ -60,7 +61,11 @@
                 <artifactId>dubbo-container-api</artifactId>
                 <version>${dubbo.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo-rpc-default</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
             <!-- guice -->
             <dependency>
                 <groupId>com.google.inject</groupId>

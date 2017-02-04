@@ -52,7 +52,7 @@ public class DefaultDubboAnnotationService implements DubboAnnotationService {
         referenceService.setExtensionFactory(extensionFactory);
     }
 
-    @Start
+    @Start(order = 10)
     @Override
     public void start() {
         if(CollectionUtils.isNotEmpty(serviceClasses)){
@@ -60,22 +60,22 @@ public class DefaultDubboAnnotationService implements DubboAnnotationService {
         }
     }
 
-    @Dispose
+    @Dispose(order = 10)
     @Override
     public void stop() {
-        for (ServiceConfig<?> serviceConfig : exportService.getServiceConfigs()) {
-            try {
-                serviceConfig.unexport();
-            } catch (Throwable e) {
-                logger.error(e.getMessage(), e);
-            }
-        }
-        for (ReferenceConfig<?> referenceConfig : referenceService.getReferenceConfigs().values()) {
-            try {
-                referenceConfig.destroy();
-            } catch (Throwable e) {
-                logger.error(e.getMessage(), e);
-            }
-        }
+//        for (ServiceConfig<?> serviceConfig : exportService.getServiceConfigs()) {
+//            try {
+//                serviceConfig.unexport();
+//            } catch (Throwable e) {
+//                logger.error(e.getMessage(), e);
+//            }
+//        }
+//        for (ReferenceConfig<?> referenceConfig : referenceService.getReferenceConfigs().values()) {
+//            try {
+//                referenceConfig.destroy();
+//            } catch (Throwable e) {
+//                logger.error(e.getMessage(), e);
+//            }
+//        }
     }
 }
