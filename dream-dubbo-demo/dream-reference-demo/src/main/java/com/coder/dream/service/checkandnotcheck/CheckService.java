@@ -1,6 +1,7 @@
 package com.coder.dream.service.checkandnotcheck;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.coder.dream.guice.lifecycle.Start;
 import com.google.inject.Singleton;
 
 /**

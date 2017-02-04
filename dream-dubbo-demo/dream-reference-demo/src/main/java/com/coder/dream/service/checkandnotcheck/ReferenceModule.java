@@ -24,10 +24,10 @@ public class ReferenceModule extends DubboModule {
     @Override
     protected void configure() {
         super.configure();
-//        bind(CheckNotCheckEntrance.class).asEagerSingleton();
+        bind(CheckNotCheckEntrance.class);
 
         //此时可以，不启动service，但不会影响整个reference项目的启动
-        bind(OnlyNotCheckEntrace.class).asEagerSingleton();
+//        bind(OnlyNotCheckEntrace.class).asEagerSingleton();
     }
 
     @Provides

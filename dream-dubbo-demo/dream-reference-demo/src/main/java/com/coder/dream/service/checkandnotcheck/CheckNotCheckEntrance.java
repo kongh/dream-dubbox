@@ -1,5 +1,6 @@
 package com.coder.dream.service.checkandnotcheck;
 
+import com.coder.dream.guice.lifecycle.Start;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 
@@ -9,9 +10,23 @@ import com.google.inject.Singleton;
 @Singleton
 public class CheckNotCheckEntrance {
 
+    private CheckService checkService;
+
+    private NotCheckService notCheckService;
+
     @Inject
     public CheckNotCheckEntrance(CheckService checkService, NotCheckService notCheckService) {
-        checkService.test();
-        notCheckService.test();
+        this.checkService = checkService;
+        this.notCheckService = notCheckService;
+    }
+
+    @Start
+    public void test(){
+        try {
+            checkService.test();
+            notCheckService.test();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
