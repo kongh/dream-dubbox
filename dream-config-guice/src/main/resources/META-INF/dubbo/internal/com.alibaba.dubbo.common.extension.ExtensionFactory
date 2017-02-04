@@ -1,0 +1,1 @@
+guice=com.coder.dream.dubbo.config.guice.extension.GuiceExtensionFactory
