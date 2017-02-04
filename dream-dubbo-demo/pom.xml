@@ -42,6 +42,8 @@
         <module>dream-reference-demo</module>
         <module>dream-service-demo</module>
         <module>dream-service-demo-core</module>
+        <module>dream-exception-demo-core</module>
+        <module>dream-exception-define</module>
     </modules>
 
 
